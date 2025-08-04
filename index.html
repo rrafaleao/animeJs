@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Animações - Anime.js</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">AnimeJs</div>
+            <nav class="nav">
+                <a href="#" class="active">Início</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-layout">
+            <!-- Sidebar com categorias -->
+            <aside class="sidebar">
+                <h3>Animações</h3>
+                
+                <div class="category">
+                    <h4>Entradas</h4>
+                    <ul class="animation-list">
+                        <li class="active">bounce-in-top</li>
+                        <li>bounce-in-bottom</li>
+                        <li>bounce-in-left</li>
+                        <li>bounce-in-right</li>
+                        <li>slide-in-top</li>
+                        <li>slide-in-bottom</li>
+                        <li>slide-in-left</li>
+                        <li>slide-in-right</li>
+                        <li>fade-in</li>
+                        <li>fade-in-top</li>
+                        <li>fade-in-bottom</li>
+                        <li>scale-in-center</li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h4>Saídas</h4>
+                    <ul class="animation-list">
+                        <li>bounce-out-top</li>
+                        <li>bounce-out-bottom</li>
+                        <li>slide-out-top</li>
+                        <li>slide-out-bottom</li>
+                        <li>fade-out</li>
+                        <li>scale-out-center</li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h4>Atenção</h4>
+                    <ul class="animation-list">
+                        <li>heartbeat</li>
+                        <li>jello-horizontal</li>
+                        <li>wobble-hor-bottom</li>
+                        <li>shake-horizontal</li>
+                        <li>vibrate-1</li>
+                        <li>bounce</li>
+                        <li>pulse</li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h4>Texto</h4>
+                    <ul class="animation-list">
+                        <li>tracking-in-expand</li>
+                        <li>tracking-in-contract</li>
+                        <li>focus-in-expand</li>
+                        <li>focus-in-contract</li>
+                        <li>text-shadow-drop-center</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Área principal de preview -->
+            <main class="preview-area">
+                <div class="animation-demo">
+                    <div class="demo-element" id="demo-element">A</div>
+                </div>
+
+                <div class="animation-info">
+                    <h2 class="animation-title" id="animation-title">bounce-in-top</h2>
+                    <p class="animation-description" id="animation-description">
+                        O elemento entra na tela vindo de cima com um efeito de bounce suave e natural.
+                    </p>
+                    <button class="play-button" id="play-btn">Reproduzir</button>
+                    <button class="play-button secondary" id="reset-btn">Resetar</button>
+                </div>
+
+                <div class="code-section">
+                    <div class="code-header">
+                        <h4>Código Anime.js</h4>
+                        <button class="copy-button" id="copy-btn">Copiar</button>
+                    </div>
+                    <div class="code-block" id="code-block"></div>
+                </div>
+            </main>
+
+            <!-- Painel de controles -->
+            <aside class="controls-panel">
+                <h3>Controles</h3>
+                
+                <div class="control-group">
+                    <label>Duração</label>
+                    <div class="range-container">
+                        <input type="range" class="range-input" id="duration" min="0.1" max="5" step="0.1" value="1.1">
+                        <span class="range-value" id="duration-value">1.1s</span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>Delay</label>
+                    <div class="range-container">
+                        <input type="range" class="range-input" id="delay" min="0" max="3" step="0.1" value="0">
+                        <span class="range-value" id="delay-value">0s</span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>Iterações</label>
+                    <select class="control-input" id="iterations">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="infinite">Infinito</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Direção</label>
+                    <select class="control-input" id="direction">
+                        <option value="normal">Normal</option>
+                        <option value="reverse">Reverso</option>
+                        <option value="alternate">Alternado</option>
+                        <option value="alternate-reverse">Alt. Reverso</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Fill Mode</label>
+                    <select class="control-input" id="fill-mode">
+                        <option value="none">None</option>
+                        <option value="forwards">Forwards</option>
+                        <option value="backwards">Backwards</option>
+                        <option value="both" selected>Both</option>
+                    </select>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
